@@ -14,16 +14,26 @@ Contributors:
     Helen O'Connell
 '''
 
-
 import tweepy
 
 
-#Tweet a picutre
+
 def tweetPicture(api ,picUrl):
+    '''
+    Tweets picture from url
+    :param api: API object
+    :param picUrl: String-File Path on Machine
+    :return:
+    '''
     api.update_with_media(picUrl)
 
-#Tweet a post
 def tweetPost(api, postStr):
+    '''
+    Tweets text from postStr.
+    :param api:  API object
+    :param postStr: String
+    :return:
+    '''
     api.update_status(postStr)
 
 def apiSetUp(conKey, conSec, accTok, accSec):
