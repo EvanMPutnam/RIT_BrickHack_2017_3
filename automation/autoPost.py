@@ -102,6 +102,8 @@ def uploadImages(lstDirectory,lstUploaded, api):
             #Upload and update lst
             print("POSTING FILENAME:"+elem)
             lst.append(elem)
+            #Post to twitter
+            basicTwitter.tweetPicture(api, elem)
     return lst
 
 
@@ -148,7 +150,7 @@ def automate():
     Used to automate with python and cron.
     :return:
     """
-    updateTwitter("photo.txt")
+    updateTwitter("photos.txt")
 
 
 
